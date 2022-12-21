@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: grey;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 600px;
+
+
+        }
+
+        .applybox {
+            background-color: white;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 600px;
+            margin-top: 20px;
+            box-shadow: 5px 5px 5px rgb(178, 176, 176);
+        }
+
+        .formcontainer {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 10fr));
+            gap: 20px;
+        }
+
+        .formcontrol {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 15px;
+
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 15px;
+            font-size: 15px;
+            border: 2px solid grey;
+
+
+
+        }
+
+        .btncontainer {
+            margin-top: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        button {
+            padding: 5px 20px;
+            margin: 10px;
+            width: 150px;
+            background-color: rgb(241, 40, 40);
+            border: 3px solid grey;
+            color: white;
+            border-radius: 5px;
+            transition: 0.5s ease-in;
+
+
+        }
+
+        button:hover {
+            color: black;
+            background-color: rgb(83, 185, 83);
+            cursor: pointer;
+            transition: 0.5s ease-out;
+
+        }
+
+        .textcontrol {
+            grid-column: 1 / span 2;
+        }
+
+        .textcontrol textarea {
+            width: 100%;
+        }
+
+        @media (max-width:700px) {
+            .container {
+                
+                width: 600px;
+
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="applybox">
+            <h1>Job Application Form</h1>
+            <form action="">
+                <div class="formcontainer">
+                    <div class="formcontrol">
+                        <label for="firstname"> First Name</label>
+                        <input type="text" name="First Name" id="firstname" placeholder="Enter">
+                    </div>
+                    <div class="formcontrol">
+                        <label for="lastname"> Last Name</label>
+                        <input type="text" name="Last Name" id="lastname" placeholder="Enter">
+
+                    </div>
+
+
+                    <div class="formcontrol">
+                        <label for="email"> Email</label>
+                        <input type="email" name="Email" id="email" placeholder="Enter">
+                    </div>
+                    <div class="formcontrol">
+                        <label for="joptype">Job type</label>
+                        <select name="Job type" id="jobtype">
+                            <option value="null"> Select </option>
+                            <option value="Web Developer "> Web Develoeper </option>
+                            <option value="Frontened Developer"> Frontened Develoeper </option>
+                            <option value="Backend Developer"> Backend Developer </option>
+                            <option value="Full Stack Develoeper"> Full Stack Developer</option>
+                        </select>
+
+
+
+                    </div>
+                    <div class="textcontrol">
+                        <label for="address"> Address </label>
+                        <textarea name="Address" id="address" cols="60" rows="4" placeholder="Enter"></textarea>
+
+                    </div>
+                    <div class="formcontrol">
+                        <label for="city"> City</label>
+                        <input type="text" name="City" id="city" placeholder="Enter">
+                    </div>
+                    <div class="formcontrol">
+                        <label for="pincode"> Pin Code </label>
+                        <input type="number" name="pincode" id="pincode" placeholder="Enter">
+
+
+                    </div>
+
+
+                    <div class="formcontrol">
+                        <label for="date"> Date </label>
+                        <input type="date" name="Date" id="date">
+                    </div>
+                    <div class="formcontrol">
+                        <label for="uploadyourcv"> Upload Your CV </label>
+                        <input type="file" name="Upload Your CV" id="uploadyourcv">
+
+                    </div>
+
+
+
+                </div>
+
+
+            </form>
+            <div class="btncontainer">
+                <button type="submit"> Apply Now</button>
+                <button type="reset"> Reset </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9131d6f12f.js" crossorigin="anonymous"></script>
+
+    <title>myTunes</title>
+
+    <style>
+        :root {
+            --purple500: #281154;
+            --purple300: #270082;
+            --purple600: #1b0058;
+            --red600: #dc0000;
+            --body: #f9f6ff;
+
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* text-decoration: none; */
+
+        }
+
+        html,
+        Body {
+            line-height: 1.4;
+            font-weight: 300;
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+
+
+
+        }
+
+        header {
+
+            background-color: #1b0058;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 5px 5px 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .container a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navcontent ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            text-decoration: none;
+            padding: 20px;
+            font-weight: 400;
+
+        }
+
+        .navcontent li {
+            border-bottom: 2px solid transparent;
+            transition: 0.3s ease-in;
+        }
+
+        .navcontent li:hover {
+            border-bottom: 2px solid white;
+            transition: 0.3s ease-out;
+        }
+
+        .navcontent ul a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .hero {
+            background-image: url(image3/hero.jpg);
+            background-position: center;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            height: 100vh;
+            display: grid;
+            color: white;
+            place-items: center;
+            text-align: center;
+
+        }
+
+        .herocontent {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .herocontent h1 {
+            font-size: 92px;
+        }
+
+        .herocontent h3 {
+            font-size: 40px;
+        }
+
+        .herocontent p {
+            font-size: 20px;
+        }
+
+        .music {
+            background-color: #281154;
+            color: white;
+            padding: 50px;
+        }
+
+        .music_container {
+            max-width: 1300px;
+
+            margin: 0 auto;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+
+        }
+
+        .music_container img {
+            width: 800px;
+
+        }
+
+        .ipad_img {
+            margin-top: -300px;
+            position: relative;
+            top: 300px;
+
+        }
+
+        button {
+            border: none;
+            padding: 10px 15px;
+            transition: 0.2s ease-in-out
+        }
+
+        button:hover {
+            cursor: pointer;
+
+            opacity: 0.8;
+            transition: 0.2s ease-in-out;
+        }
+
+        .btn1 {
+            background-color: #dc0000;
+            color: #f9f6ff;
+            font-weight: 600;
+
+        }
+
+        .about_music_container {
+            max-width: 1300px;
+
+            margin: 0 auto;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding-top: 300px;
+
+
+
+        }
+
+        .about_music_container img {
+            width: 1000px;
+        }
+
+        .btn2 {
+            background-color: #270082;
+            color: white;
+        }
+
+        .video {
+            background-image: url(image3/video.jpg);
+            display: grid;
+            color: white;
+            text-align: center;
+            min-height: 800px;
+            background-position: center;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+
+
+        }
+
+        .video_container {
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            justify-content: center;
+            max-width: 1300px;
+            margin: 0 auto;
+            font-family: 'Robot', sans-serif;
+            gap: 30px;
+            margin-top: -300px;
+        }
+
+        .giftcard img {
+            width: 300px;
+        }
+
+        .giftcard {
+            max-width: 1300px;
+            margin: 80px auto;
+            scroll-margin: 100px;
+
+
+        }
+
+        .giftcard_conatiner {
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+        }
+
+        .gift_content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .footer1 {
+            background-color: #1b0058;
+            color: white;
+
+
+        }
+
+        .footer_container {
+            display: flex;
+            max-width: 1300px;
+            justify-content: space-between;
+            padding: 50px;
+            margin: 0 auto;
+
+        }
+
+        .footer_container ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+        }
+
+        .footer_container ul:hover {
+            cursor: pointer;
+        }
+
+        .footer2 {
+            background-color: #270082;
+            color: white;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        section {
+            scroll-margin: 50px;
+        }
+
+        @media (max-width:786px) {
+            header {
+                width: 780px;
+            }
+
+            header {
+
+                background-color: #1b0058;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                box-shadow: 5px 5px 5px;
+            }
+
+            .logo {
+                margin: 20px;
+            }
+
+            section {
+                width: 786px;
+                margin: auto;
+            }
+
+            .music_container img {
+                width: 600px;
+
+            }
+
+            .about_music_container img {
+                width: 800px;
+            }
+
+            .giftcard_conatiner {
+                flex-direction: column;
+                margin: 20px;
+            }
+
+            footer {
+                width: 786px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="#overview">
+                <div class="logo">
+                    myTunes
+                </div>
+            </a>
+
+            <div class="navcontent">
+                <ul>
+                    <a href="#overview">
+                        <li>Overview</li>
+                    </a>
+                    <a href="#music">
+                        <li>Music</li>
+                    </a>
+                    <a href="#video">
+                        <li>Video</li>
+                    </a>
+                    <a href="#gift_card">
+                        <li>Gift Cards</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="overview">
+            <div class="herocontent">
+                <h1>myTunes</h1>
+                <h3>
+                    Your music,movies and TV shows take centre stage.
+                </h3>
+                <p>myTunes is the best way to organize and enjoy the music, movies, and TV shows you already have - and
+                    shop for the ones.Enjoy all the entartainment myTunes has to offer on your Mac and PC.</p>
+
+            </div>
+        </section>
+        <section class="music" id="music">
+            <div class="music_container">
+                <h1><span><i class="fa-solid fa-music"></i></span>
+                    Music</h1>
+                <h2> Stream over 45 million songs, ad-free. Or download albums and tracks to listen to offline. All the
+                    music in your personal myTunes library-no matter where it came from - lives right alongside the
+                    Orange Music catelog. Start your free three-month trial with no commitment, and cancel anytime.</h2>
+                <button class="btn1">Start Your Trial Now</button>
+                <p>Orange Music is available in myTunes, and for iOS and Android devices.</p>
+                <img class="ipad_img" src="image3/music.png" alt="">
+
+
+
+            </div>
+        </section>
+        <section class="about_music">
+            <div class="about_music_container">
+                <h3>The movie and TV collection you always wished for Granted.</h3>
+                <p>With over 100,000 movies and TV shows to choose from, there's always something great to watch on
+                    myTunes and if you watch on Orange TV 4K, you'll be able to enjoy a tremendous selection of your
+                    favorite content in 4K HDR. So get ready to enjoy episodes of your favorite TV shows or hit movies
+                    you've been waiting to see-anytime,anywhere. Just tap to play, or even download if you're going
+                    somewhere you won't have WI-FI.
+                </p>
+                <button class="btn2"> Read More </button>
+                <p> </p>
+                <img src="image3/mac.png" alt="">
+            </div>
+        </section>
+        <section class="video" id="video">
+            <div class="video_container">
+                <h1>A world of entertainment. Available wherever you are</h1>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis inventore numquam voluptas, illo
+                    iusto optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere vel reprehenderit
+                    aliquam. Ad autem
+                    officia tenetur id unde, tempore libero architecto dolor ipsum expedita aliquam sit quidem
+                    accusantium eligendi voluptatum quia repellendus. Ullam, eaque qui.</h3>
+            </div>
+
+        </section>
+        <section class="giftcard" id="gift_card">
+
+            <div class="giftcard_conatiner">
+                <div class="gift_image">
+                    <img src="image3/giftcard.png" alt="giftcard">
+                </div>
+                <div class="gift_content">
+                    <h3>Gift Card</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae totam, ea temporibus repudiandae
+                        tempore adipisci laborum cum excepturi earum. Aspernatur vitae quis consequatur itaque at
+                        deserunt. Cum, impedit. Culpa laboriosam non eveniet ab, ducimus neque. Quisquam architecto
+                        tempore eos eius, quibusdam dolore animi aperiam accusamus, aliquid unde ut! Amet, possimus?</p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, possimus.</p>
+                    <hr>
+                    <button class="btn2"> Redeem </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer1">
+        <div class="footer_container">
+
+            <ul>
+                <h3>Shop & Learn</h3>
+                <hr>
+                <li><a href="music"></a> Music </li>
+                <li><a href="movies"></a> Movies </li>
+                <li><a href="shows"></a> Shows </li>
+                <li><a href="Apps"></a> Apps </li>
+                <li><a href="giftcards"></a> Gift Cards </li>
+            </ul>
+
+            <ul>
+                <h3>Orange Store</h3>
+                <hr>
+                <li><a href="find a store"></a> Find a Store </li>
+                <li><a href="Today at Orange"></a> Today at Orange </li>
+                <li><a href="Orange Camp"></a> Orange Camp </li>
+                <li><a href="Financing"></a> Financing </li>
+                <li><a href="order status"></a> Order Status </li>
+            </ul>
+
+            <ul>
+                <h3>Education & Business</h3>
+                <hr>
+                <li><a href="orange & Eduction"></a> Orange & Education </li>
+                <li><a href="shor for collage"></a> Shops for Collage </li>
+                <li><a href="orange & business"></a> Orange & Business </li>
+                <li><a href="shop for business"></a> Shops for Business </li>
+                <li><a href="jobs"></a> Jobs </li>
+            </ul>
+
+
+            <ul>
+                <h3>About Orange</h3>
+                <hr>
+                <li><a href="newsroom"></a> Newsroom</li>
+                <li><a href="orange leadership"></a>Orange Leadership</li>
+                <li><a href="investors"></a> Investors </li>
+                <li><a href="events"></a> Events </li>
+                <li><a href="contact orange"></a> Contact Orange </li>
+            </ul>
+
+        </div>
+    </footer>
+    <footer class="footer2">
+        <p>Copyright &copy; 2022 Design By Sarfaraz Alam</p>
+    </footer>
+
+
+</body>
+
+</html>

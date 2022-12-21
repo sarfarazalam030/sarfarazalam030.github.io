@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>My Portfolio</title>
+    <script src="https://kit.fontawesome.com/9131d6f12f.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            line-height: 1.4;
+            scroll-behavior: smooth;
+            color: white;
+            /* max-width: 1600px; */
+            /* max-height: 2000px; */
+
+        }
+
+        nav {
+            background-color: rgb(17, 141, 190);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+
+
+
+        }
+
+        .nav_container {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            color: white;
+            align-items: center;
+            /* position: sticky; */
+
+        }
+
+        .logo {
+            font-size: 30px;
+        }
+
+        .content ul {
+            font-size: 20px;
+            display: flex;
+            gap: 40px;
+            list-style: none;
+
+        }
+
+        .content ul a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .content li {
+            border-bottom: 2px solid transparent;
+            transition: 0.3s ease-in;
+
+        }
+
+        .content li:hover {
+            cursor: pointer;
+            border-bottom: 2px solid yellow;
+            transition: 0.3s ease-out;
+        }
+
+        .home {
+            background-color: rgb(7, 43, 86);
+            max-height: 500px;
+            border-bottom: 5px solid rgb(27, 106, 201);
+        }
+
+        .home_container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            gap: 170px;
+            align-items: center;
+            padding: 20px;
+
+        }
+
+        .home img {
+
+            width: 300px;
+        }
+
+        .home_content {
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .hi {
+            font-size: 50px;
+            color: rgb(249, 249, 40);
+        }
+
+        .name {
+            font-size: 50px;
+        }
+
+        .home_content h2 {
+            font-size: 60px;
+            font-weight: bold;
+
+            overflow: hidden;
+            border-right: 0.15em solid orange;
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: orange;
+            }
+        }
+
+        .card img {
+            width: 350px;
+            height: 220px;
+            border-radius: 10px;
+        }
+
+        .project {
+
+            background-color: rgb(2, 37, 85);
+            /* max-height: 1200px; */
+
+        }
+
+        .project h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 60px;
+            /* margin-bottom: 50px;*/
+        }
+
+        .container {
+
+            max-width: 1300px;
+            margin: 20px auto;
+
+        }
+
+        .project_container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+
+
+        }
+
+        .grid {
+
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .card {
+            /* margin-top: 20px; */
+            margin-bottom: 30px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            /* border-radius: 20px; */
+            overflow: hidden;
+            transition: 0.5s ease-in-out;
+
+
+        }
+
+        .card a {
+            text-decoration: none;
+        }
+
+        .card:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: 1s ease-in-out;
+        }
+
+        .card img:hover {
+            transition: 0.5s ease-in-out;
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .card .content {
+            padding: 10px;
+            position: relative;
+            top: -25px;
+            margin: -25px;
+            transform: translateY(50px);
+            transition: 0.5s ease-in-out;
+            color: navy;
+
+        }
+
+        .card:hover .content {
+            background-color: white;
+            color: rgb(7, 43, 86);
+            transform: translateY(0px);
+        }
+
+        .contact {
+            margin-top: -20px;
+
+            height: 500px;
+            background-color: rgb(7, 43, 86);
+        }
+
+        .contact h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 60px;
+            padding: 100px 0px;
+
+        }
+
+        .contact_container {
+            max-width: 110vh;
+
+            margin: 0 auto;
+
+            font-size: 30px;
+            justify-content: center;
+
+
+        }
+
+        .first_contact {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+
+
+
+        }
+
+        .contact_container .icon a {
+            display: flex;
+            text-align: center;
+            gap: 10px;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+
+        }
+
+        footer {
+            background-color: rgb(2, 37, 85);
+            /* border: 2px solid white; */
+
+
+            text-align: center;
+            font-size: 20px;
+            padding: 20px;
+
+        }
+
+        @media (max-width:700px) {
+            .content ul {
+                font-size: 15px;
+                gap:10px;
+                
+
+            }
+
+
+
+            .home_container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .home img {
+                width: 200px;
+            }
+
+            .home_content h2 {
+                font-size: 35px;
+            }
+
+            .contact {
+                height: 550px;
+            }
+
+            .contact_content .first_contact {
+                display: flex;
+                flex-direction: column;
+
+                padding: 10px;
+                margin: 10px;
+
+                font-size: 20px;
+            }
+
+            .contact h1 {
+                padding: 15px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_container">
+            <div class="logo">
+                <h3>Portfolio</h3>
+            </div>
+            <div class="content">
+                <ul>
+
+                    <a href="#home">
+                        <li>Home</li>
+                    </a>
+                    <a href="#project">
+                        <li>Projects</li>
+                    </a>
+                    <a href="#contact">
+                        <li>Contact</li>
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="home" id="home">
+        <div class="home_container">
+            <div class="image animate__animated animate__bounce animate__bounceInLeft">
+                <img src="/images/mypic.jpeg" alt="">
+            </div>
+            <div class="home_content">
+                <h1>
+                    <span class="hi">Hi,</span> I am
+                    <span class="name">Sarfaraz Alam</span>
+                </h1>
+                <h2>Frontend Developer </h2>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="project" id="project">
+        <h1>PROJECTS</h1>
+        <div class="container">
+            <div class="project_container">
+                <div class="grid">
+                    <div class="card">
+                        <div class="image">
+                            <img src="/images/project 1.png" alt="">
+                        </div>
+                        <a href="/project 1/index.html" target="_blank">
+                            <div class="content">
+                                <h3>Gym Website</h3>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="image">
+                            <img src="/images/project 2.png" alt="">
+                        </div>
+                        <a href="/project 2/index.html" target="_blank">
+                            <div class="content">
+                                <h3>Tribute Website</h3>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="image">
+                            <img src="/images/project 3.png" alt="">
+                        </div>
+                        <a href="/project 3/index.html" target="_blank">
+                            <div class="content">
+                                <h3>Job Application Form</h3>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="image">
+                            <img src="/images/project 4.png" alt="">
+                        </div>
+                        <a href="project 4/index.html" target="_blank">
+                            <div class="content">
+                                <h3>Parallex Website</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="image">
+                            <img src="/images/project 5.png" alt="">
+                        </div>
+                        <a href="/project 5/index.html" target="_blank">
+                            <div class="content">
+                                <h3>Landing Website</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="image">
+                            <img src="/images/project 6.png" alt="">
+                        </div>
+                        <a href="/project 6/index.html" target="_blank">
+                            <div class="content">
+                                <h3>Restaurent Website</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="image">
+                            <img src="/images/project 7.png" alt="">
+                        </div>
+                        <a href="/project 7/index.html" target="_blank">
+                            <div class="content">
+                                <h3>myMusic</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="image">
+                            <img src="/images/project 8.png" alt="">
+                        </div>
+                        <a href="/project 8/index.html" target="_blank">
+                            <div class="content">
+                                <h3>HR Portal</h3>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h1>Let's Work together...</h1>
+        <div class="contact_container">
+            <div class="contact_content">
+                <div class="first_contact">
+                    <div class="icon">
+                        <a href="http://www.linkedin.com/in/md-sarfaraz-alam-0103011b8/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <h3>Linkedin</h3>
+                        </a>
+
+                    </div>
+                    <div class="icon">
+                        <a href="https://twitter.com/saffuuuuu" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                            <h3>Twitter</h3>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCHrjmsvhgKFLRpFRJswdcpfhkpzsdDcHJhpfdvbLqtsPSGrBHRvzxMgXcHzScFrwzMPPjWg"
+                            target="_blank">
+                            <i class="fa-regular fa-envelope"></i>
+                            <h3>Sarfarazalam030@gmail.com</h3>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="first_contact">
+                    <div class="icon">
+                        <a href="http://" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            <h3>Github</h3>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://wa.me/+918507281264" target="_blank">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <h3>Mobile</h3>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer">
+            <p>Created by Sarfaraz Alam</p>
+        </div>
+    </footer>
+</body>
+
+</html>

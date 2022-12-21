@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurent </title>
+    <script src="https://kit.fontawesome.com/9131d6f12f.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+
+        }
+
+        body,
+        html {
+            font-weight: 400;
+            font-family: "Lato", sans-serif;
+            /* line-height: 1.8em; */
+            background-color: rgb(176, 212, 106);
+
+        }
+
+        .navigation_container {
+            box-shadow: 5px 5px 5px gray;
+            border-radius: 20px;
+            margin-top: 10px;
+            border: none;
+            position: sticky;
+            top: 0;
+            background-color: rgb(176, 212, 106);
+            margin-bottom: 10px;
+            padding: 10px;
+
+        }
+
+        .navigation {
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+
+        }
+
+        .bar {
+            font-size: 30px;
+        }
+
+        .bar:hover {
+            cursor: pointer;
+        }
+
+        .logo img {
+            width: 200px;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+        }
+
+        .hero_img img {
+            width: 600px;
+            height: 400px;
+
+        }
+
+        .container1 {
+
+            max-width: 1300px;
+            margin: 100px auto;
+
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+
+        }
+
+        .tag {
+            color: white;
+            background-color: rgb(1, 139, 1);
+            width: 30%;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            margin: 0 au;
+        }
+
+        .hero_content h1 {
+            font-size: 72px;
+            line-height: 1.2em;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 10px 20px;
+            color: white;
+            background-color: rgb(239, 174, 53);
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.1s ease-in;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            transform: scale(1.06);
+            transition: 0.1s ease-out;
+        }
+
+        .features {
+            display: flex;
+            margin-top: 150px;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 25px;
+
+
+
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            gap: 20px;
+            transition: 0.2s ease-in;
+
+        }
+
+        .feature:hover {
+            cursor: pointer;
+            box-shadow: 5px 5px 5px rgb(212, 228, 133);
+            transition: 0.2s ease-out;
+            transform: scale(1.02);
+
+        }
+
+        .icon_img img {
+            width: 60px;
+
+        }
+
+        .border {
+            border: 1px solid grey;
+            margin-bottom: 20px;
+            background-color: grey;
+            margin-top: 50px;
+        }
+
+        .menu {
+
+            max-width: 1300px;
+            margin: 100px auto;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+
+
+
+        }
+
+        .menu .tag {
+            width: 100px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            font-size: 20px;
+            transition: 0.1s ease-in;
+
+
+
+        }
+
+        .menu .tag:hover {
+            cursor: pointer;
+            transform: scale(1.06);
+            transition: 0.1s ease-out;
+
+        }
+
+        .grid {
+            display: grid;
+            gap: 10px;
+            margin-top: 20px;
+            grid-template-areas: "I1 I2 I3 "
+
+                "I4 I5 I6 ";
+
+        }
+
+        .grid img {
+            width: 450px;
+            height: 250px;
+            border-radius: 20px;
+            transition: 0.2s ease-in;
+            height: 100%;
+            width: 100%;
+        }
+
+        .grid img:hover {
+            cursor: pointer;
+            transform: scale(1.04);
+            transition: 0.2s ease-out;
+        }
+
+        .item1 {
+            grid-area: I1;
+        }
+
+        .item2 {
+            grid-area: I2;
+        }
+
+        .item3 {
+            grid-area: I3;
+        }
+
+        .item4 {
+            grid-area: I4;
+        }
+
+        .item5 {
+            grid-area: I5;
+        }
+
+        .item6 {
+            grid-area: I6;
+        }
+
+        .logo_container img {
+            width: 200px;
+        }
+
+        footer {
+            background-color: rgb(255, 249, 250);
+
+
+        }
+
+        .footer_container {
+            width: 1300px;
+            display: flex;
+            justify-content: space-between;
+
+            margin: 0px auto;
+            padding: 50px;
+
+
+        }
+
+        .footer_content {
+            line-height: 1.5em;
+        }
+
+        .footer_container h3 {
+            color: grey;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .footer_container ul {
+            list-style: none;
+            font-size: 15px;
+        }
+
+        .newsletter input {
+            padding: 4px 30px;
+
+            margin-bottom: 10px;
+
+        }
+
+        .follow i {
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 25px;
+        }
+
+        .follow i:hover {
+            cursor: pointer;
+        }
+
+
+
+
+
+
+        @media (max-width:700px) {
+            .hero {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .hero_img {
+                display: flex;
+                justify-content: center;
+                width: 80%;
+
+            }
+
+            .hero_img img {
+                width: 110%;
+                height: auto;
+
+            }
+
+            .hero_content h1 {
+                font-size: 37px;
+                line-height: 1.2em;
+                margin-bottom: 20px;
+                font-weight: 00;
+            }
+
+            .features {
+                flex-direction: column;
+                font-size: 15px;
+            }
+
+            .grid {
+                padding: 10px;
+            }
+
+            .footer_container {
+                flex-direction: column;
+
+
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navigation_container">
+        <div class="navigation">
+            <div class="logo">
+                <img src="image2/logo.png" alt="logo">
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+    </nav>
+    <section class="container1">
+        <div class="hero">
+            <div class="hero_img">
+                <img src="image2/img1.jpg" alt="">
+            </div>
+            <div class="hero_content">
+                <div class="tag">
+                    50% off on All Foods
+                </div>
+                <h1>
+                    Enjoy Your Delicious Food
+                </h1>
+                <p>If you find something to be delicious, you could simply say “Yummy!” or you could expand it into a
+                    sentence. This cheesecake is really yummy.</p>
+                <button class="btn">
+                    Explore Now
+                </button>
+            </div>
+        </div>
+        <section class="features">
+            <div class="feature">
+                <div class="icon_img">
+                    <img src="icons/price-tag.png" alt="">
+                </div>
+                <div class="icon_content">
+                    <h1>Discunt Voucher</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, dignissimos.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="icon_img">
+                    <img src="icons/fast-food.png" alt="">
+                </div>
+                <div class="icon_content">
+                    <h1>Fresh & Healthy Foods</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, dignissimos.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="icon_img">
+                    <img src="icons/house.png" alt="">
+                </div>
+                <div class="icon_content">
+                    <h1>Fast Delivery</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, dignissimos.</p>
+                </div>
+            </div>
+        </section>
+        <div class="border"></div>
+        <div class="menu">
+            <div class="tag">Our Menu</div>
+            <h1>Explore Our Menu</h1>
+            <div class="grid">
+                <div class="item1">
+                    <img src="image2/food1.jpg" alt="thali">
+                </div>
+                <div class="item2">
+                    <img src="image2/food2.jpg" alt="idli">
+                </div>
+                <div class="item3">
+                    <img src="image2/food3.jpg" alt="dosa">
+                </div>
+                <div class="item4">
+                    <img src="image2/food4.jpg" alt="biryani">
+                </div>
+                <div class="item5">
+                    <img src="image2/food5.jpg" alt="tikka">
+                </div>
+                <div class="item6">
+                    <img src="image2/food6.jpg" alt="chaat">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="logo_container">
+                <img src="image2/logo.png" alt="">
+            </div>
+            <div class="footer_content">
+                <h3>Main Links</h3>
+                <ul>
+                    <li>Order Tracking</li>
+                    <li>New Order</li>
+                    <li>Contact Us</li>
+                    <li>News and Blogs</li>
+
+                </ul>
+            </div>
+            <div class="footer_content">
+                <h3>Support</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms and Conditions</li>
+
+                </ul>
+            </div>
+            <div class="newsletter">
+                <h3>Newsletter</h3>
+                <input type="email" name="emai" placeholder="Enter Your Email">
+                <div class="follow">
+                    <h3>Follow Us</h3>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>

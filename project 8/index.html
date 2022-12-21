@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9131d6f12f.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+
+            line-height: 1.2;
+            letter-spacing: 2px;
+
+
+
+        }
+
+        main {
+            background-image: url(images2/bg.jpg);
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+
+            display: grid;
+
+            place-items: center;
+
+        }
+
+        .container {
+            background-image: url(images2/bg2.png);
+            width: 780px;
+            height: 418.55px;
+            background-color: white;
+            border: none;
+            background-position: left;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            display: flex;
+            gap: 100px;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: -0.2px;
+
+
+        }
+
+        .left_side {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            padding: 50px;
+            color: white;
+        }
+
+        .content p {
+            font-size: 40px;
+            font-weight: 300;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .content h4 {
+            font-size: 30px;
+            margin-bottom: 60px;
+            font-weight: 500;
+            font-family: 'Roboto', sans-serif;
+            font-stretch: expandeds;
+        }
+
+        .formcontainer {
+            display: grid;
+            gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 10fr));
+
+        }
+
+        .formcontrol {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 400;
+            
+            font-size: 15px;
+            margin-bottom: 5px;
+            font-family: 'Roboto', sans-serif;
+            color: rgba(6, 39, 80, 0.948);
+        }
+
+        input,
+        select {
+            padding: 8px;
+            font-size: 15px;
+            border: 1px solid lightgrey;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+
+
+
+        }
+
+        .btncontainer {
+            margin-top: 5px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        button {
+            padding: 5px 20px;
+            margin: 10px;
+            width: 90px;
+            background-color: rgba(6, 39, 80, 0.948);
+            border: none;
+            color: white;
+            border-radius: 5px;
+            transition: 0.5s ease-in;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+
+
+        }
+
+       
+
+        button:hover {
+
+
+            cursor: pointer;
+            transition: 0.5s ease-out;
+        }
+        @media (max-width:710px){
+            main{
+                width: 780px;
+                height: 800px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="left_side">
+
+                <div class="image">
+                    <img src="images2/logo.png" alt="">
+
+                </div>
+                <div class="content">
+                    <p>Welcome to</p>
+                    <h4>HR Portal</h4>
+                </div>
+                <footer>
+                    <p>&iacute; Support</p>
+                </footer>
+            </div>
+            <form class="right_side" action="">
+
+                <div class="formcontainer">
+                    <div class="formcontrol">
+                        <label for="company name ">Company Name</label>
+                        <select name="company name" id="companyname">
+                            <option value="null">Please Select</option>
+                            <option value="ABTEC">ABTEC</option>
+                            <option value="Adventureland">Adventureland</option>
+                            <option value="AFM">AFM</option>
+                            <option value="Alliance-RealEstate">Alliance-RealEstate</option>
+                            <option value="ASCS - Barsha">ASCS - Barsha</option>
+                            <option value="ASCS - Layyah">ASCS - Layyah</option>
+                            <option value="ASCS - Maliha">ASCS - Maliha</option>
+                            <option value="Bucomac">Bucomac</option>
+                            <option value="BEAM">BEAM</option>
+                            <option value="BIIL">BIIL</option>
+                            <option value="BIL - Insurance">BIL - Insurance</option>
+                            <option value="BIL - Corporate">BIL - Corporate</option>
+                            <option value="BPI">BPI</option>
+                            <option value="CONMIX">CONMIX</option>
+                            <option value="Eastern">Eastern</option>
+                            <option value="EDUCAP">EDUCAP</option>
+                            <option value="ETS">ETS</option>
+                            <option value="Emitac Group">Emitac Group</option>
+                            <option value="Family Office">Family Office</option>
+                            <option value="GermanGulf">GermanGulf</option>
+
+                        </select>
+                    </div>
+
+                    <div class="formcontrol">
+                        <label for="login">Login</label>
+                        <input type="text" name="login" class="login">
+
+                    </div>
+
+                    <div class="formcontrol">
+                        <label for="Password">Password</label>
+                        <input type="password" name="password" class="password">
+
+                    </div>
+                    <div class="btncontainer">
+                        <button type="button">
+                                <!-- <i class="fa-regular fa-lock-keyhole"></i> -->
+                                <p>Login</p>
+                            
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </form>
+
+
+        </div>
+
+
+
+    </main>
+
+
+
+
+</body>
+
+</html>
